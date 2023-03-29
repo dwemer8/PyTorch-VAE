@@ -1,6 +1,6 @@
 import torch
 import torch.nn.functional as F
-from models import BaseVAE
+from .base import BaseVAE #from models import BaseVAE
 from torch import nn
 from .types_ import *
 
