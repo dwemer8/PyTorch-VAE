@@ -159,6 +159,7 @@ class VAEDataset(LightningDataModule):
             num_workers=self.num_workers,
             shuffle=True,
             pin_memory=self.pin_memory,
+            drop_last=True,
         )
 
     def val_dataloader(self) -> Union[DataLoader, List[DataLoader]]:
@@ -168,6 +169,7 @@ class VAEDataset(LightningDataModule):
             num_workers=self.num_workers,
             shuffle=False,
             pin_memory=self.pin_memory,
+            drop_last=True,
         )
     
     def test_dataloader(self) -> Union[DataLoader, List[DataLoader]]:
@@ -177,5 +179,6 @@ class VAEDataset(LightningDataModule):
             num_workers=self.num_workers,
             shuffle=True,
             pin_memory=self.pin_memory,
+            drop_last=True,
         )
      
